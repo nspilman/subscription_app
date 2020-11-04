@@ -143,6 +143,8 @@ env = environ.Env()
 environ.Env.read_env()
 
 SECRET_KEY = os.environ.get('SECRET_KEY',env('SECRET_KEY'))
+DEBUG = False
+#Debug Override
 DEBUG = json.loads(os.environ.get('DEBUG',env('DEBUG')).lower())
 
 EMAIL_HOST = 'smtp.gmail.com'  # since you are using a gmail account
