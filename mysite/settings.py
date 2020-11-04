@@ -19,8 +19,6 @@ ADMINS = [('Nate','Nate.spilman@gmail.com')]
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-ALLOWED_HOSTS = ['142.93.245.126','localhost:8000','localhost','natespilman.tech','pioneer-django.herokuapp.com']
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -156,6 +154,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER",env('EMAIL_HOST_USER'))
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD",env('EMAIL_HOST_PASSWORD'))
 CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS",env('CORS_ALLOWED_ORIGINS')).split(',')
+ALLOWED_HOSTS = os.environ.get("ALLOWED_HOSTS",env("ALLOWED_HOSTS")).split(',')
 
 ### Google Sheets settings
 try:
