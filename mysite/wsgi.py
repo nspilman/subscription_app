@@ -12,7 +12,4 @@ import os
 from django.core.wsgi import get_wsgi_application
 
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'mysite.settings')
-subprocess.run('django' "manage.py", "makemigrations")
-subprocess.run('django', "manage.py", 'migrate')
-
 application = get_wsgi_application()
