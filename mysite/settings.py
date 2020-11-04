@@ -153,7 +153,6 @@ EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD",env('EMAIL_HOST_PASSW
 CORS_ALLOWED_ORIGINS = os.environ.get("CORS_ALLOWED_ORIGINS",env('CORS_ALLOWED_ORIGINS')).split(',')
 
 ### Google Sheets settings
-GSHEET_CONFIG = os.environ.get("GSHEET_CONFIG",env("GSHEET_CONFIG"))
 try:
     import django_heroku
     django_heroku.settings(locals())
