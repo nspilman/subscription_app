@@ -145,7 +145,10 @@ environ.Env.read_env()
 SECRET_KEY = os.environ.get('SECRET_KEY',env('SECRET_KEY'))
 DEBUG = False
 #Debug Override
-DEBUG = json.loads(os.environ.get('DEBUG',env('DEBUG')).lower())
+try:
+    DEBUG = json.loads(os.environ.get('DEBUG',env('DEBUG')).lower())
+except:
+    pass
 
 EMAIL_HOST = 'smtp.gmail.com'  # since you are using a gmail account
 EMAIL_PORT = 587  # Gmail SMTP port for TLS
